@@ -1,0 +1,41 @@
+2020-05-12 00:03:03.703  WARN 14596 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: 500 : [{"timestamp":"2020-05-11T18:33:03.317+0000","status":500,"error":"Internal Server Error","message":"GENERAL","trace":"com.netflix.zuul.exception.ZuulException: Forwarding error\r\n\tat org.springframe... (17065 bytes)]
+2020-05-12 00:03:05.728  WARN 14596 --- [restartedMain] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-05-12 00:03:05.756  WARN 14596 --- [restartedMain] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2020-05-12 00:03:08.215  WARN 14596 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-12 00:03:12.225  WARN 14596 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-05-12 00:03:13.237  WARN 14596 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-12 00:03:13.569  WARN 14596 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-12 00:03:14.657  WARN 14596 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-05-12 01:58:46.698  WARN 14596 --- [RMI TCP Connection(125)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1589228926661, current=DOWN, previous=UP]
+2020-05-12 01:59:01.188  WARN 14596 --- [RMI TCP Connection(125)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [RxIoScheduler-1 (Evictor)] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.lang.Thread.run(Unknown Source)
+2020-05-12 18:23:12.500  WARN 1004 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: 500 : [{"timestamp":"2020-05-12T12:53:12.481+0000","status":500,"error":"Internal Server Error","message":"GENERAL","trace":"com.netflix.zuul.exception.ZuulException: Forwarding error\r\n\tat org.springframe... (17065 bytes)]
+2020-05-12 18:23:15.825  WARN 1004 --- [restartedMain] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-05-12 18:23:15.864  WARN 1004 --- [restartedMain] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2020-05-12 18:23:18.737  WARN 1004 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-12 18:23:28.119  WARN 1004 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-05-12 18:23:29.172  WARN 1004 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-12 18:23:30.190  WARN 1004 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-12 18:23:32.082  WARN 1004 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-05-12 18:28:19.897  INFO 1004 --- [hystrix-AnalysisReportController-1] c.c.r.c.AnalysisReportController         : number propertiessold at particular location
+2020-05-12 18:28:19.899 ERROR 1004 --- [hystrix-AnalysisReportController-1] c.c.r.c.AnalysisReportController         : Error happened at locationAnalysis()
+2020-05-12 18:28:39.030  INFO 1004 --- [hystrix-AnalysisReportController-2] c.c.r.c.AnalysisReportController         : number propertiessold at particular location
+2020-05-12 18:28:39.030 ERROR 1004 --- [hystrix-AnalysisReportController-2] c.c.r.c.AnalysisReportController         : Error happened at locationAnalysis()
+2020-05-12 18:36:18.292  INFO 1004 --- [hystrix-AnalysisReportController-3] c.c.r.c.AnalysisReportController         : number propertiessold at particular location
+2020-05-12 18:36:18.293 ERROR 1004 --- [hystrix-AnalysisReportController-3] c.c.r.c.AnalysisReportController         : Error happened at locationAnalysis()
+2020-05-12 18:37:33.982  INFO 1004 --- [hystrix-AnalysisReportController-4] c.c.r.c.AnalysisReportController         : number propertiessold at particular location
+2020-05-12 18:37:33.983 ERROR 1004 --- [hystrix-AnalysisReportController-4] c.c.r.c.AnalysisReportController         : Error happened at locationAnalysis()
+2020-05-12 18:37:43.690  INFO 1004 --- [hystrix-AnalysisReportController-5] c.c.r.c.AnalysisReportController         : number propertiessold at particular location
+2020-05-12 18:37:43.691 ERROR 1004 --- [hystrix-AnalysisReportController-5] c.c.r.c.AnalysisReportController         : Error happened at locationAnalysis()
+2020-05-12 18:40:27.245  INFO 1004 --- [hystrix-AnalysisReportController-6] c.c.r.c.AnalysisReportController         : number propertiessold at particular location
+2020-05-12 18:40:27.246 ERROR 1004 --- [hystrix-AnalysisReportController-6] c.c.r.c.AnalysisReportController         : Error happened at locationAnalysis()
+2020-05-12 18:41:06.341  INFO 1004 --- [hystrix-AnalysisReportController-7] c.c.r.c.AnalysisReportController         : number propertiessold at particular location
+2020-05-12 18:41:06.343 ERROR 1004 --- [hystrix-AnalysisReportController-7] c.c.r.c.AnalysisReportController         : Error happened at locationAnalysis()

@@ -23,6 +23,7 @@ import com.cg.realestate.model.Buyer;
 import com.cg.realestate.model.LocationAnalysis;
 import com.cg.realestate.model.PropertySell;
 import com.cg.realestate.service.AnalysisService;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -43,6 +44,7 @@ public class AnalysisReportController {
 	AnalysisService service;
 	
 	@GetMapping(path = "/data")
+	@HystrixCommand(fallbackMethod="alternateMethod")
 	@ApiOperation(value = "LocationWiseAnalysis", nickname = "LocationWiseAnalysis")
 	@ApiResponses(value = { @ApiResponse(code = 200, message = "Success", response = PropertySell.class),
 							@ApiResponse(code = 500, message = "Failure", response = PropertySell.class) })
@@ -63,8 +65,18 @@ public class AnalysisReportController {
 			logger.info("number propertiessold at particular location");
 			logger.trace(" Inside locationAnalysis() ");
 			logger.error("Error happened at locationAnalysis()");
+
 			return properties;
 	}
+
+	
+	public List<PropertySell> alternateMethod() {   
+        System.out.println("inside alternateMethod");
+        logger.info("Due to Exception, the fallbackmethod is called by Hystrix");
+        List<PropertySell> list = new ArrayList<>();
+        return list;
+ }
+	
 	
 	@PostMapping(path = "/storedata")
 	public LocationAnalysis storeAnalysisData(@RequestBody LocationAnalysis locationAnalysis) {
