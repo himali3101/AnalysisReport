@@ -43,7 +43,7 @@ public class AnalysisReportApplication {
                  "API CREATION",
                  "1.0",
                  "Free to Use",
-                 new Contact("Himali Gunjal","/property" ,"himaligunjal31@gmail.com"),
+                 new Contact("Himali Gunjal","/analysis" ,"himaligunjal31@gmail.com"),
                  "API licence",
                  "/limits",
                  Collections.emptyList());

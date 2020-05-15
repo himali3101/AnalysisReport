@@ -50,21 +50,15 @@ public class AnalysisReportController {
 							@ApiResponse(code = 500, message = "Failure", response = PropertySell.class) })
 	public List<PropertySell> locationAnalysis() {
 		    String url = "http://localhost:9009/buyorsell/display";
-			RestTemplate restTemplate = new RestTemplate();
-			//List<User> user = restTemplate.getClientHttpRequestInitializers(url)
+			
+		    RestTemplate restTemplate = new RestTemplate();
+			
 			ResponseEntity<PropertySell[]> responseEntity = restTemplate.getForEntity(url, PropertySell[].class);
 			List<PropertySell> properties = Arrays.asList(responseEntity.getBody());
 			
-		/*	List<Buyer> buyers = new ArrayList<>();
 		
-			for( PropertySell propertySell : properties) {
-				buyer = propertySell.getBuyer();
-				buyers.add(buyer);
-			}
-		*/	
 			logger.info("number propertiessold at particular location");
 			logger.trace(" Inside locationAnalysis() ");
-			logger.error("Error happened at locationAnalysis()");
 
 			return properties;
 	}
